@@ -1,0 +1,11 @@
+digraph G {
+"base_link" -> "camera"[label="Broadcaster: /base_link_camera_link_broadcaster\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 38.500 sec old)\nBuffer length: 0.000 sec\n"];
+"base_footprint" -> "base_link"[label="Broadcaster: /stageros\nAverage rate: 20.202 Hz\nMost recent transform: 38.500 ( 0.000 sec old)\nBuffer length: 4.950 sec\n"];
+"base_link" -> "base_laser_link"[label="Broadcaster: /stageros\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 38.500 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "base_footprint"[label="Broadcaster: /stageros\nAverage rate: 20.202 Hz\nMost recent transform: 38.500 ( 0.000 sec old)\nBuffer length: 4.950 sec\n"];
+"map" -> "odom"[label="Broadcaster: /localization_node\nAverage rate: 20.202 Hz\nMost recent transform: 38.600 ( -0.100 sec old)\nBuffer length: 4.950 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 38.500"[ shape=plaintext ] ;
+ }->"map";
+}
